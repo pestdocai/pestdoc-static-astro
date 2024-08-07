@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Button } from "@nextui-org/button";
+import { useState } from "react"
+import {Button, Input} from "@nextui-org/react";
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+
 
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -12,7 +13,7 @@ const HeroSection = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (!isValidEmail(email)) {
       setResponseMessage("Please enter a valid email address.");
       return;
@@ -20,16 +21,14 @@ const HeroSection = () => {
     setIsSubmitting(true);
     setResponseMessage("");
 
-    const url = process.env.REACT_APP_API_URL;
-    const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
+    const url = 'https://real-benoite-pestdoc.koyeb.app/api/web/interest-email';
 
-    console.log("Access Token:", accessToken);
+    console.log("url : ", url);
     try {
       const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify({ email }),
       });
@@ -54,12 +53,30 @@ const HeroSection = () => {
       <div className="md:w-1/2 mb-10 md:mb-0">
         <h2 className="text-4xl md:text-5xl font-bold">Hey Guys! We're coming soon...</h2>
         <p className="mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <form onSubmit={handleSubmit} className="flex items-center space-x-4 mt-10">
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="p-2 text-black flex-grow" style={{ borderRadius: "0.5rem" }} required />
-          <button type="submit" className="bg-custom-button text-black font-bold py-2 px-4" style={{ borderRadius: "0.5rem" }} disabled={isSubmitting}>
+        {/*<form*/}
+        {/*    onSubmit={handleSubmit}*/}
+        {/*    className="flex items-center space-x-4 mt-10"*/}
+        {/*>*/}
+          <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              className="p-2 text-black flex-grow"
+              style={{ borderRadius: "0.5rem" }}
+              client:visible
+          />
+          <Button
+              type="submit"
+              onPress={handleSubmit}
+              className="bg-custom-button text-black font-bold py-2 px-4"
+              style={{ borderRadius: "0.5rem" }}
+              disabled={isSubmitting}
+              client:visible
+          >
             {isSubmitting ? "Submitting..." : "Notify me"}
-          </button>
-        </form>
+          </Button>
+        {/*</form>*/}
         {responseMessage && <p className="mt-4 text-black">{responseMessage}</p>}
         <div className="socmed flex space-x-2 mt-10">
           <a href="https://www.instagram.com/pestdoc_ai" className="text-black">
