@@ -23,7 +23,6 @@ const HeroSection = () => {
     const url = process.env.REACT_APP_API_URL;
     const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
-    console.log("Sending request to:", url);
     console.log("Access Token:", accessToken);
     try {
       const response = await fetch(url, {
