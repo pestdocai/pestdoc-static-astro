@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarComponent from "../../components/NavbarComponent";
+import { Image } from "@nextui-org/react";
+import BreadcrumbHelp from "../../components/breadcrumb-help";
+import CopyLinkButton from "../../components/copy-link-button";
+---
+
+<Layout title="Delete Account">
+  <NavbarComponent client:load boldFirst="Pest Doc" regularMiddle="tor" boldLast=" AI" regularLast=" Help" />
+
+  <!-- Hero Section -->
+  <div class="bg-[#F2FDFF] w-full">
+    <div class="mx-auto px-6 text-center pt-32">
+      <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">How to Delete Pest Doctor AI Account</p>
+      <div class="flex justify-end md:items-end">
+        <Image width={350} src="../assets/Hand holding a small light bulb.svg" class="w-48 sm:w-60 md:w-80 lg:w-96 max-w-full object-contain z-0" client:visible />
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-col md:flex-row justify-between m-24 gap-20">
+    <!-- Left Column - Instructions -->
+    <div class="w-3xl">
+      <div class="flex justify-between">
+        <BreadcrumbHelp />
+        <CopyLinkButton />
+      </div>
+
+      <p class="text-4xl font-bold">Delete Pest Doctor AI Account</p>
+      <p class="text-base mt-3 mb-3">Importing and exporting brushes allows you to share and receive unique brushes.</p>
+
+      <!-- Steps Section -->
+      <div class="space-y-8 w-">
+        <!-- Step 1 -->
+        <section>
+          <h2 class="font-semibold text-xl">1. Open Pest Doctor AI Apps</h2>
+          <p class="text-xl">Download and open the Pest Doctor AI app on your device, then sign in or create an account to access its full range of features and start solving pest problems efficiently.</p>
+          <p class="mt-5">Lorem ipsum dolor sit amet consectetur. Iaculis nulla morbi mauris consectetur mi duis auctor mattis rhoncus.</p>
+        </section>
+
+        <!-- Step 2 -->
+        <section>
+          <h2 class="font-semibold text-xl">2. Go to Profile Page</h2>
+          <p class="text-xl">Download and open the Pest Doctor AI app on your device, then sign in or create an account to access its full range of features and start solving pest problems efficiently.</p>
+          <p class="mt-5">Lorem ipsum dolor sit amet consectetur. Iaculis nulla morbi mauris consectetur mi duis auctor mattis rhoncus.</p>
+        </section>
+
+        <!-- Step 3 -->
+        <section>
+          <h2 class="font-semibold text-xl">3. Select Delete Account Menu</h2>
+          <p class="text-xl">Download and open the Pest Doctor AI app on your device, then sign in or create an account to access its full range of features and start solving pest problems efficiently.</p>
+          <p class="mt-5">Lorem ipsum dolor sit amet consectetur. Iaculis nulla morbi mauris consectetur mi duis auctor mattis rhoncus.</p>
+        </section>
+
+        <!-- Step 4 -->
+        <section>
+          <h2 class="font-semibold text-xl">4. Delete Account</h2>
+          <p class="text-xl">Download and open the Pest Doctor AI app on your device, then sign in or create an account to access its full range of features and start solving pest problems efficiently.</p>
+          <p class="mt-5">Lorem ipsum dolor sit amet consectetur. Iaculis nulla morbi mauris consectetur mi duis auctor mattis rhoncus.</p>
+        </section>
+
+        <!-- Step 5 -->
+        <section>
+          <h2 class="font-semibold text-xl">5. Finish</h2>
+          <p class="text-xl">Download and open the Pest Doctor AI app on your device, then sign in or create an account to access its full range of features and start solving pest problems efficiently.</p>
+          <p class="mt-5">Lorem ipsum dolor sit amet consectetur. Iaculis nulla morbi mauris consectetur mi duis auctor mattis rhoncus.</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Right Column - Disclaimer -->
+    <div id="disclaimerWrapper" class="">
+      <div id="disclamerTab" class="bg-[#F45751] text-white py-4 px-3 rounded-l-lg cursor-pointer shadow-lg">
+        <p class="text-3xl">Disclaimer</p>
+      </div>
+      <div id="diclaimerContent" class="max-w-6xl rounded overflow-hidden shadow-lg p-5 w-[280px] bg-white rounded-l-lg transition-transform transform md:translate-x-0 translate-x-full">
+        <ol class="list-decimal pl-5 space-y-2">
+          <li class="text-gray-400">The subscription must be inactive before deleting the account.</li>
+          <li class="text-gray-400">Data will persist for 30 days after account deletion.</li>
+          <li class="text-gray-400">You can still log in to a deleted account within 30 days of deletion.</li>
+          <li class="text-gray-400">Deleting an account means removing profile data, but not transactional data, such as chat history.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<hr />
+
+<!-- Footer -->
+<footer>
+  <div class="flex justify-between p-20">
+    <!-- Footer Left Section -->
+    <div class="container-row-footer">
+      <div class="flex items-center mt-3 mb-5">
+        <Image width={30} src="../assets/PestDoc-AI-Logo.svg" client:visible />
+        <span class="ml-2">
+          <span class="font-semibold">Pest</span>
+          <span class="font-normal">Doctor</span>
+          <span class="font-semibold">AI</span>
+        </span>
+      </div>
+      <p class="text-[#6F6C90] mb-3">
+        Lorem ipsum dolor sit amet <br /> consectetur adipiscing elit aliquam
+      </p>
+      <div class="flex gap-2 items-center">
+        <Image radius="none" src="../assets/Facebook.svg" client:visible />
+        <Image radius="none" src="../assets/Twitter.svg" client:visible />
+        <Image radius="none" src="../assets/Instagram.svg" client:visible />
+        <Image radius="none" src="../assets/LinkedIn.svg" client:visible />
+        <Image radius="none" src="../assets/Youtube.svg" client:visible />
+      </div>
+    </div>
+
+    <!-- Footer Right Section -->
+    <div class="container-row-footer flex items-start gap-20">
+      <!-- Contact Information -->
+      <div>
+        <p class="font-semibold mt-3 mb-5">Contact us</p>
+        <div class="flex items-center mb-2">
+          <Image src="../assets/Email.svg" alt="Email Icon" client:visible />
+          <p class="ml-2">contact@company.com</p>
+        </div>
+        <div class="flex items-center mb-2">
+          <Image src="../assets/Phone.svg" alt="Phone Icon" client:visible />
+          <p class="ml-2">(414) 687 - 5892</p>
+        </div>
+        <div class="flex items-center mb-2">
+          <Image src="../assets/Mark.svg" alt="Location Icon" client:visible />
+          <p class="ml-2">
+            794 Mcallister St <br /> San Francisco, 94102
+          </p>
+        </div>
+      </div>
+
+      <!-- Download Links -->
+      <div class="container-row-footer mt-3">
+        <p class="font-semibold mb-5">Download Now</p>
+        <div class="mt-3 flex flex-col gap-3">
+          <Image width={150} src="../assets/Google-play.svg" client:visible />
+          <Image width={150} src="../assets/App-Store.svg" client:visible />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <hr class="w-[95%] mx-auto" />
+  <div class="flex justify-between p-3">
+    <div>
+      <p class="ml-6 text-sm">Copyright © 2024 PestDocAI</p>
+    </div>
+    <div class="flex mr-6 text-sm">
+      All Rights Reserved |
+      <span class="underline text-[#4A3AFF]">Terms and Conditions</span> |
+      <span class="underline text-[#4A3AFF]">Privacy Policy</span>
+    </div>
+  </div>
+
+  <style>
+    .slide-transition {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+  <script>
+    function initializeDisclaimer() {
+      const disclaimerTab = document.getElementById("disclaimerTab");
+      const disclaimerContent = document.getElementById("disclaimerContent");
+      let isOpen = false;
+
+      if (disclaimerTab && disclaimerContent) {
+        disclaimerTab.addEventListener("click", () => {
+          isOpen = !isOpen;
+          if (isOpen) {
+            disclaimerTab.style.transform = "translateX(-280px)";
+            disclaimerContent.style.transform = "translateX(0)";
+          } else {
+            disclaimerTab.style.transform = "translate(0)";
+            disclaimerContent.style.transform = "translate(100%)";
+          }
+        });
+      }
+    }
+    document.addEventListener("DOMContentLoaded", initializeDisclaimer);
+  </script>
+</footer>

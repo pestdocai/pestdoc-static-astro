@@ -1,6 +1,6 @@
 // tailwind.config.cjs
 const { nextui } = require("@nextui-org/react");
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', '"Montserrat Variable"', ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", '"Montserrat Variable"', "Roboto", ...defaultTheme.fontFamily.sans],
       },
       screens: {
         xxs: "375px",
