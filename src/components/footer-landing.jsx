@@ -7,7 +7,8 @@ export default function App() {
       <div className="flex items-center gap-3 p-5">
         <Image src="../assets/PestDoc-AI-Logo.svg" className="w-10" alt="logo" />
         <h1 className="text-white text-lg tracking-widest">
-          Pest<span className="font-thin">Doc</span>-AI
+          Pest
+          <span className="font-thin"> Doctor</span> AI
         </h1>
       </div>
       <div className="px-5 sm:px-10 lg:pl-40">
@@ -15,20 +16,14 @@ export default function App() {
       </div>
       <div className="flex flex-row justify-between items-center py-5 px-4 sm:px-10">
         <div className="flex flex-wrap justify-start gap-2 sm:gap-4 lg:gap-10 text-white lg:pl-32">
-          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
+          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href={"/privacy-policy"}>
             Privacy Policy
           </Link>
-          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
-            Terms of Use
+          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href={"/terms-conditions"}>
+            Terms and Conditions
           </Link>
           <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
-            Sales and Refunds
-          </Link>
-          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
-            Legal
-          </Link>
-          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
-            Site Map
+            Delete Account
           </Link>
         </div>
         <div className="flex gap-2 sm:gap-5 ml-2 sm:ml-0">

@@ -48,7 +48,7 @@ export default function App() {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-8 md:gap-14 px-4 sm:px-0">
+    <div className="flex flex-col items-center gap-8 md:gap-14 px-4 xss:px-20 xs:px-28 md:px-0">
       {authors.map((author, index) => (
         <AuthorCard key={index} {...author} />
       ))}
