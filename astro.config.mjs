@@ -7,20 +7,23 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   redirects: {
-    '/': '/landing/pre-launch'
+    "/": "/landing/post-launch",
   },
   server: {
     port: 4321,
-    host: true
+    host: true,
   },
   integrations: [tailwind(), react()],
   vite: {
     ssr: {
-      noExternal: ['@fontsource-variable/montserrat']
-    }
+      noExternal: [
+        "@fontsource-variable/montserrat",
+        "@fontsource-variable/dm-sans",
+      ],
+    },
   },
   output: "server",
   adapter: node({
-    mode: "standalone"
-  })
+    mode: "standalone",
+  }),
 });

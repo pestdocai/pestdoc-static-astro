@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", '"Montserrat Variable"', "Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", '"Montserrat Variable"', "Roboto", "DM Sans Variable", ...defaultTheme.fontFamily.sans],
       },
       screens: {
         xxs: "375px",
