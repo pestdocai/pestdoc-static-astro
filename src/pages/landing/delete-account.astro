@@ -1,0 +1,282 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarComponent from "../../components/NavbarComponent";
+import {Button, Image, Link} from "@nextui-org/react";
+import BreadcrumbHelp from "../../components/breadcrumb-help";
+import CopyLinkButton from "../../components/copy-link-button";
+import DisclaimerFloatButton from "../../components/disclaimer-float-button";
+
+const title = "Delete Account";
+---
+
+<Layout title={title}>
+    <NavbarComponent client:load title={title}/>
+
+    <!-- Hero Section -->
+    <div class="bg-[#F2FDFF] w-full">
+        <div class="mx-auto px-6 text-center pt-32">
+            <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">How to Delete Pest Doctor AI Account</p>
+            <div class="flex justify-end md:items-end">
+                <Image width={350} src="../assets/Hand-holding-a-small-light-bulb.svg" client:visible/>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="flex flex-col md:flex-row justify-between my-6 xxs:my-12 md:my-24 gap-0 xl:gap-20">
+        <!-- Left Column - Instructions -->
+        <div class="px-5 xxs:px-10 sm:px-12 md:px-20">
+            <div class="flex justify-between flex-col gap-2 xs:flex-row xs:gap-0">
+                <BreadcrumbHelp/>
+                <CopyLinkButton/>
+            </div>
+
+            <p class="text-4xl font-bold">Delete Pest Doctor AI Account</p>
+            <p class="text-base mt-3 mb-3">Follow the steps below to delete an account on the Pest Doctor AI mobile
+                app.</p>
+
+            <!-- Steps Section -->
+            <div class="space-y-8 w-">
+                <!-- Step 1 -->
+                <section>
+                    <h2 class="font-semibold text-xl">1. Open Pest Doctor AI Apps</h2>
+                    <p class="text-xl">Account deletion can only be done within the Pest Doctor AI mobile app.</p>
+                    <p class="mt-5">Tap on the Pest Doctor AI app icon to open the mobile app, make sure you are logged
+                        into the account to be deleted.</p>
+                </section>
+
+                <!-- Step 2 -->
+                <section>
+                    <h2 class="font-semibold text-xl">2. Go to Profile Page</h2>
+                    <div class="flex flex-row flex-wrap gap-1">
+                        <span class="text-xl">Tap drawer</span>
+                        <Image radius="none" src="../assets/Drawer.svg" client:visible/>
+                        <span class="text-xl">and go to profile menu</span>
+                    </div>
+
+                    <p class="mt-5">You will be directed to the profile page that is already logged in. Double-check
+                        that the account to be deleted is correct before proceeding with the account deletion
+                        process.</p>
+                </section>
+
+                <!-- Step 3 -->
+                <section>
+                    <h2 class="font-semibold text-xl">3. Select Delete Account Menu</h2>
+                    <p class="text-xl">Tap on "Delete Account."</p>
+                    <p class="mt-5">The account deletion page will be displayed, and please make sure to read the
+                        information on this page.</p>
+                </section>
+
+                <!-- Step 4 -->
+                <section>
+                    <h2 class="font-semibold text-xl">4. Delete Account</h2>
+                    <p class="text-xl">Read the information on this page carefully.</p>
+                    <p class="mt-5">If you are sure, you can proceed with the account deletion process. However, before
+                        deleting your account, make sure you do not have any active subscription plans.</p>
+                </section>
+
+                <!-- Step 5 -->
+                <section>
+                    <h2 class="font-semibold text-xl">5. Finish</h2>
+                    <p class="text-xl">The account deletion was successfully completed.</p>
+                    <p class="mt-5">Wait up to 30 days for your account to be fully deleted. You can still log in to
+                        your account during this period, but the deletion process will continue, and your account will
+                        be completely removed after the waiting period ends.</p>
+                </section>
+            </div>
+        </div>
+
+        <!--Right Column - Disclaimer-->
+        <div class="flex-col mr-20 hidden lg:flex">
+            <p class="text-3xl">Disclaimer</p>
+            <div class="max-w-6xl rounded overflow-hidden shadow-lg p-5 w-[280px] bg-white rounded-l-lg transition-transform transform md:translate-x-0 translate-x-full">
+                <ol class="list-decimal pl-5 space-y-2 text-[#6A6C73]">
+                    <li>The subscription must be inactive before deleting the account.</li>
+                    <li>Data will persist for 30 days after account deletion.</li>
+                    <li>You can still log in to a deleted account within 30 days of deletion.</li>
+                    <li>Deleted data includes profile data and virtual consultation schedule history, but does not
+                        delete transactional data, such as chat history.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed right-[-35px] top-[60%] z-10 flex lg:hidden -rotate-90">
+        <DisclaimerFloatButton client:visible/>
+    </div>
+
+    <hr/>
+
+    <!-- Footer -->
+    <footer class="px-5 xxs:px-10 pt-5 xxs:pt-10 sm:px-12 sm:pt-12 md:px-20 md:pt-20 pb-6">
+        <div class="flex align-top justify-between pb-4 lg:pb-12 px-0 md:px-3">
+            <!-- Footer Left Section -->
+            <div class="container-row-footer w-full md:max-w-[45%] lg:max-w-[30%]">
+                <div class="flex items-center">
+                    <Image width={30} src="../assets/PestDoc-AI-Logo.svg" client:visible/>
+                    <span class="ml-2 text-3xl">
+                        <span class="font-semibold">Pest</span>
+                        <span class="font-normal">Doctor</span>
+                        <span class="font-semibold">AI</span>
+                    </span>
+                </div>
+                <p class="text-[#6F6C90] mt-5 mb-3 md:mb-4 fontDmSans">
+                    Pest Expert Solutions
+                </p>
+                <div class="gap-3 items-center hidden md:flex">
+                    <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/"
+                            as={Link} size="sm">
+                        <Image radius="none" src="../assets/instagram-delete.svg" client:visible/>
+                    </Button>
+                    <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai"
+                            as={Link} size="sm">
+                        <Image radius="none" src="../assets/tiktok-delete.svg" client:visible/>
+                    </Button>
+                    <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link} size="sm">
+                        <Image radius="none" src="../assets/x-delete.svg" client:visible/>
+                    </Button>
+                </div>
+            </div>
+
+            <!-- Footer Right Section -->
+            <div class="container-row-footer items-start gap-20 fontDmSans hidden md:flex">
+                <!-- Contact Information -->
+                <div>
+                    <p class="font-semibold mt-3 mb-5 text-xl">Contacts us</p>
+                    <div class="flex items-center mb-2">
+                        <Image radius="none" src="../assets/Email.svg" alt="Email Icon" client:visible/>
+                        <p class="ml-2 text-[#6F6C90]">apps@pestdoc-ai.com</p>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <Image radius="none" src="../assets/Phone.svg" alt="Phone Icon" client:visible/>
+                        <p class="ml-2 text-[#6F6C90]">(+6222) 20512328</p>
+                    </div>
+                    <div class="flex items-start mb-2">
+                        <Image radius="none" src="../assets/Mark.svg" alt="Location Icon" client:visible/>
+                        <p class="ml-2 text-[#6F6C90]">
+                            Gedung Graha Selaras,<br/>Jl. Asia Afrika No.129 Kota Bandung,<br/>Jawa Barat 40112
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download Links -->
+                <div class="container-row-footer mt-3 hidden lg:block">
+                    <p class="font-semibold mb-5 text-xl">Download Now</p>
+                    <div class="mt-3 flex flex-col gap-3">
+                        <Link isExternal={true} color="foreground"
+                              href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
+                            <Image width={200} src="../assets/Google-Play.svg" client:visible/>
+                        </Link>
+                        <Link isExternal={true} color="foreground"
+                              href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
+                            <Image radius="none" width={200} src="../assets/App-Store.svg" client:visible/>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pb-8 md:hidden">
+            <p class="font-semibold mt-3 mb-5 text-xl">Contacts us</p>
+            <div class="flex items-center mb-2">
+                <Image radius="none" src="../assets/Email.svg" alt="Email Icon" client:visible/>
+                <p class="ml-2 text-[#6F6C90]">apps@pestdoc-ai.com</p>
+            </div>
+            <div class="flex items-center mb-2">
+                <Image radius="none" src="../assets/Phone.svg" alt="Phone Icon" client:visible/>
+                <p class="ml-2 text-[#6F6C90]">(+6222) 20512328</p>
+            </div>
+            <div class="flex items-start mb-2">
+                <Image radius="none" src="../assets/Mark.svg" alt="Location Icon" client:visible/>
+                <p class="ml-2 text-[#6F6C90]">
+                    Gedung Graha Selaras, Jl. Asia Afrika No.129 Kota Bandung, Jawa Barat 40112
+                </p>
+            </div>
+        </div>
+
+        <div class="container-row-footer mt-3 pb-8 md:pb-12 flex flex-col lg:hidden items-center">
+            <p class="font-semibold mb-2 text-xl">Download Now</p>
+            <div class="mt-3 hidden gap-5 xs:flex">
+                <Link isExternal={true} color="foreground"
+                      href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
+                    <Image radius="none" width={200} src="../assets/Google-Play.svg" client:visible/>
+                </Link>
+                <Link isExternal={true} color="foreground"
+                      href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
+                    <Image radius="none" width={200} src="../assets/App-Store.svg" client:visible/>
+                </Link>
+            </div>
+            <div class="mt-3 flex gap-5 xs:hidden">
+                <Link isExternal={true} color="foreground"
+                      href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
+                    <Image radius="none" width={100} src="../assets/Google-Play.svg" client:visible/>
+                </Link>
+                <Link isExternal={true} color="foreground"
+                      href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
+                    <Image radius="none" width={100} src="../assets/App-Store.svg" client:visible/>
+                </Link>
+            </div>
+        </div>
+
+        <div class="container-row-footer flex flex-col pb-12 md:hidden">
+            <div class="flex gap-5 justify-center items-center ">
+                <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/"
+                        as={Link} size="sm">
+                    <Image radius="none" src="../assets/instagram-delete.svg" client:visible/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai"
+                        as={Link} size="sm">
+                    <Image radius="none" src="../assets/tiktok-delete.svg" client:visible/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link} size="sm">
+                    <Image radius="none" src="../assets/x-delete.svg" client:visible/>
+                </Button>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <hr class="w-full"/>
+        <div class="flex flex-col-reverse items-center gap-5 md:flex-row md:justify-between px-1 py-5 text-[#6F6C90] text-sm">
+            <p>Copyright © 2024 Pest Doctor AI</p>
+            <div class="flex gap-2">
+                <Link href="/terms-conditions" className="text-sm">Terms and Conditions</Link>
+                <p>|</p>
+                <Link href="/privacy-policy" className="text-sm">Privacy Policy</Link>
+            </div>
+        </div>
+    </footer>
+</Layout>
+
+<style>
+    .slide-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .fontDmSans {
+        font-family: 'DM Sans Variable', sans-serif;
+    }
+</style>
+<script>
+    function initializeDisclaimer() {
+        const disclaimerTab = document.getElementById("disclaimerTab");
+        const disclaimerContent = document.getElementById("disclaimerContent");
+        let isOpen = false;
+
+        if (disclaimerTab && disclaimerContent) {
+            disclaimerTab.addEventListener("click", () => {
+                isOpen = !isOpen;
+                if (isOpen) {
+                    disclaimerTab.style.transform = "translateX(-280px)";
+                    disclaimerContent.style.transform = "translateX(0)";
+                } else {
+                    disclaimerTab.style.transform = "translate(0)";
+                    disclaimerContent.style.transform = "translate(100%)";
+                }
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", initializeDisclaimer);
+</script>
