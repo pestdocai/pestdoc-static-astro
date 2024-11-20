@@ -1,10 +1,22 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import NavbarComponent from "../../components/NavbarComponent";
-import {Button, Image, Link} from "@nextui-org/react";
+import { Image } from 'astro:assets';
+import {Button, Link} from "@nextui-org/react";
 import BreadcrumbHelp from "../../components/breadcrumb-help";
 import CopyLinkButton from "../../components/copy-link-button";
 import DisclaimerFloatButton from "../../components/disclaimer-float-button";
+import handlingBulbImage from "../../assets/Hand-holding-a-small-light-bulb.svg";
+import drawerImage from "../../assets/Drawer.svg";
+import pestdocAiLogoImage from "../../assets/PestDoc-AI-Logo.svg";
+import instagramDeleteImage from "../../assets/instagram-delete.svg";
+import tiktokDeleteImage from "../../assets/tiktok-delete.svg";
+import xDeleteImage from "../../assets/x-delete.svg";
+import emailImage from "../../assets/Email.svg";
+import phoneImage from "../../assets/Phone.svg";
+import markImage from "../../assets/Mark.svg";
+import googlePlayImage from "../../assets/Google-Play.svg";
+import appStoreImage from "../../assets/App-Store.svg";
 
 const title = "Delete Account";
 ---
@@ -17,7 +29,7 @@ const title = "Delete Account";
         <div class="mx-auto px-6 text-center pt-32">
             <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">How to Delete Pest Doctor AI Account</p>
             <div class="flex justify-end md:items-end">
-                <Image width={350} src="../assets/Hand-holding-a-small-light-bulb.svg" client:visible/>
+                <Image src={handlingBulbImage} alt="holding-bulb" width="350" />
             </div>
         </div>
     </div>
@@ -51,7 +63,7 @@ const title = "Delete Account";
                     <h2 class="font-semibold text-xl">2. Go to Profile Page</h2>
                     <div class="flex flex-row flex-wrap gap-1">
                         <span class="text-xl">Tap drawer</span>
-                        <Image radius="none" src="../assets/Drawer.svg" client:visible/>
+                        <Image src={drawerImage} alt="drawer"/>
                         <span class="text-xl">and go to profile menu</span>
                     </div>
 
@@ -115,7 +127,7 @@ const title = "Delete Account";
             <!-- Footer Left Section -->
             <div class="container-row-footer w-full md:max-w-[45%] lg:max-w-[30%]">
                 <div class="flex items-center">
-                    <Image width={30} src="../assets/PestDoc-AI-Logo.svg" client:visible/>
+                    <Image width="30" src={pestdocAiLogoImage} alt="pestdoc ai logo"/>
                     <span class="ml-2 text-3xl">
                         <span class="font-semibold">Pest</span>
                         <span class="font-normal">Doctor</span>
@@ -128,14 +140,14 @@ const title = "Delete Account";
                 <div class="gap-3 items-center hidden md:flex">
                     <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/"
                             as={Link} size="sm">
-                        <Image radius="none" src="../assets/instagram-delete.svg" client:visible/>
+                        <Image src={instagramDeleteImage} alt="instagram icon"/>
                     </Button>
                     <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai"
                             as={Link} size="sm">
-                        <Image radius="none" src="../assets/tiktok-delete.svg" client:visible/>
+                        <Image src={tiktokDeleteImage} alt="tiktok icon"/>
                     </Button>
                     <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link} size="sm">
-                        <Image radius="none" src="../assets/x-delete.svg" client:visible/>
+                        <Image src={xDeleteImage} alt="x icon"/>
                     </Button>
                 </div>
             </div>
@@ -146,15 +158,15 @@ const title = "Delete Account";
                 <div>
                     <p class="font-semibold mt-3 mb-5 text-xl">Contacts us</p>
                     <div class="flex items-center mb-2">
-                        <Image radius="none" src="../assets/Email.svg" alt="Email Icon" client:visible/>
+                        <Image src={emailImage} alt="Email Icon" />
                         <p class="ml-2 text-[#6F6C90]">apps@pestdoc-ai.com</p>
                     </div>
                     <div class="flex items-center mb-2">
-                        <Image radius="none" src="../assets/Phone.svg" alt="Phone Icon" client:visible/>
+                        <Image src={phoneImage} alt="Phone Icon" />
                         <p class="ml-2 text-[#6F6C90]">(+6222) 20512328</p>
                     </div>
                     <div class="flex items-start mb-2">
-                        <Image radius="none" src="../assets/Mark.svg" alt="Location Icon" client:visible/>
+                        <Image src={markImage} alt="Location Icon" />
                         <p class="ml-2 text-[#6F6C90]">
                             Gedung Graha Selaras,<br/>Jl. Asia Afrika No.129 Kota Bandung,<br/>Jawa Barat 40112
                         </p>
@@ -167,11 +179,11 @@ const title = "Delete Account";
                     <div class="mt-3 flex flex-col gap-3">
                         <Link isExternal={true} color="foreground"
                               href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
-                            <Image width={200} src="../assets/Google-Play.svg" client:visible/>
+                            <Image width="200" src={googlePlayImage} alt="google play image"/>
                         </Link>
                         <Link isExternal={true} color="foreground"
                               href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
-                            <Image radius="none" width={200} src="../assets/App-Store.svg" client:visible/>
+                            <Image width="200" src={appStoreImage} alt="google play image"/>
                         </Link>
                     </div>
                 </div>
@@ -181,15 +193,15 @@ const title = "Delete Account";
         <div class="pb-8 md:hidden">
             <p class="font-semibold mt-3 mb-5 text-xl">Contacts us</p>
             <div class="flex items-center mb-2">
-                <Image radius="none" src="../assets/Email.svg" alt="Email Icon" client:visible/>
+                <Image src={emailImage} alt="Email Icon" />
                 <p class="ml-2 text-[#6F6C90]">apps@pestdoc-ai.com</p>
             </div>
             <div class="flex items-center mb-2">
-                <Image radius="none" src="../assets/Phone.svg" alt="Phone Icon" client:visible/>
+                <Image src={phoneImage} alt="Phone Icon" />
                 <p class="ml-2 text-[#6F6C90]">(+6222) 20512328</p>
             </div>
             <div class="flex items-start mb-2">
-                <Image radius="none" src="../assets/Mark.svg" alt="Location Icon" client:visible/>
+                <Image src={markImage} alt="Location Icon" />
                 <p class="ml-2 text-[#6F6C90]">
                     Gedung Graha Selaras, Jl. Asia Afrika No.129 Kota Bandung, Jawa Barat 40112
                 </p>
@@ -201,21 +213,21 @@ const title = "Delete Account";
             <div class="mt-3 hidden gap-5 xs:flex">
                 <Link isExternal={true} color="foreground"
                       href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
-                    <Image radius="none" width={200} src="../assets/Google-Play.svg" client:visible/>
+                    <Image width="200" src={googlePlayImage} alt="google play image"/>
                 </Link>
                 <Link isExternal={true} color="foreground"
                       href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
-                    <Image radius="none" width={200} src="../assets/App-Store.svg" client:visible/>
+                    <Image width="200" src={appStoreImage} alt="app store image"/>
                 </Link>
             </div>
             <div class="mt-3 flex gap-5 xs:hidden">
                 <Link isExternal={true} color="foreground"
                       href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
-                    <Image radius="none" width={100} src="../assets/Google-Play.svg" client:visible/>
+                    <Image width="100" src={googlePlayImage} alt="google play image"/>
                 </Link>
                 <Link isExternal={true} color="foreground"
                       href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
-                    <Image radius="none" width={100} src="../assets/App-Store.svg" client:visible/>
+                    <Image width="100" src={appStoreImage} alt="app store image"/>
                 </Link>
             </div>
         </div>
@@ -224,14 +236,14 @@ const title = "Delete Account";
             <div class="flex gap-5 justify-center items-center ">
                 <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/"
                         as={Link} size="sm">
-                    <Image radius="none" src="../assets/instagram-delete.svg" client:visible/>
+                    <Image src={instagramDeleteImage} alt="instagram icon"/>
                 </Button>
                 <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai"
                         as={Link} size="sm">
-                    <Image radius="none" src="../assets/tiktok-delete.svg" client:visible/>
+                    <Image src={tiktokDeleteImage} alt="tiktok icon"/>
                 </Button>
                 <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link} size="sm">
-                    <Image radius="none" src="../assets/x-delete.svg" client:visible/>
+                    <Image src={xDeleteImage} alt="x icon"/>
                 </Button>
             </div>
         </div>
