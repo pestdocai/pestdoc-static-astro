@@ -15,7 +15,7 @@ export default function CopyLinkButton() {
   };
 
   return (
-    <Button onClick={copyToClipboard} className="bg-gray-200 rounded-full w-[100px] h-[28px]" startContent={<img src="/assets/link.svg" alt="link-logo" width={15} height={15} />}>
+    <Button onClick={copyToClipboard} className="bg-gray-200 rounded-full w-[100px] h-[28px]" startContent={<img src="/link.svg" alt="link-logo" width={15} height={15} />}>
       Share
     </Button>
   );
