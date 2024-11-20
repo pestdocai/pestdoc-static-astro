@@ -22,7 +22,7 @@ export default function App() {
           <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href={"/terms-conditions"}>
             Terms and Conditions
           </Link>
-          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href="#">
+          <Link className="text-[#FFFFFF] text-[8px] sm:text-xs font-thin whitespace-nowrap" href={"/landing/delete-account"}>
             Delete Account
           </Link>
         </div>

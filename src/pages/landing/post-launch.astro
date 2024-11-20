@@ -28,9 +28,13 @@ const title = "Landing Page";
       </div>
     </div>
     <div class="relative flex flex-col items-center">
-      <div class="relative mt-5 mb-0 z-10">
+      <div class="relative mt-5 mb-0 z-10 flex gap-5">
         <Link color="foreground" href="https://play.google.com/store/apps/details?id=com.ptintanmandirilestari.pestdoctor">
-          <Image width={150} src="../assets/Google-Play.svg" client:visible />
+          <Image radius="none" width={150} src="../assets/Google-Play.svg" client:visible />
+        </Link>
+        <Link isExternal={true} color="foreground"
+              href="https://apps.apple.com/id/app/pest-doctor-ai/id6730113986">
+          <Image radius="none" width={150} src="../assets/App-Store.svg" client:visible/>
         </Link>
       </div>
       <div class="relative mt-[-100px] z-0">
